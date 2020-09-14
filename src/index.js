@@ -14,12 +14,17 @@ const app = express();
 /**
  * Tipos de parâmetros:
  * 
- * Query Params:
+ * Query Params: Filtros e paginação
  * Routes Params:
  * Request Body:
  */
 
 app.get('/projects', (request, response) => {
+  const {title, owner} = request.query;
+
+  console.log(title);
+  console.log(owner);
+
   return response.json([
     'Projeto 1',
     'Projeto 2',
