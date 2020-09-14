@@ -15,7 +15,7 @@ const app = express();
  * Tipos de parâmetros:
  * 
  * Query Params: Filtros e paginação
- * Routes Params:
+ * Routes Params: Identificar recursos (Atualizar/Deletar)
  * Request Body:
  */
 
@@ -40,6 +40,10 @@ app.post('/projects', (request, response) => {
 });
 
 app.put('/projects/:id', (request, response) => {
+  const {id} = request.params;
+
+  console.log(id);
+
   return response.json([
     'Projeto 4',
     'Projeto 2',
