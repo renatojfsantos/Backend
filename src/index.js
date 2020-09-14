@@ -59,6 +59,10 @@ app.put('/projects/:id', (request, response) => {
 });
 
 app.delete('/projects/:id', (request, response) => {
+  const {id} = request.params;
+
+  console.log(id);
+  
   return response.json([
     'Projeto 2',
     'Projeto 3',
